@@ -1,0 +1,71 @@
+
+						
+			.titL2
+                              		{
+				width:950pt;
+				border-radius:50px;
+				text-indent:50px;
+	  			color: rgb(255, 255, 255);
+				font-size:1.9em;
+                                     		font-face:arial;    
+                                    		font-style:bold;
+                               			text-decoration:blink;
+				//text-shadow: 2px 4px  red;
+				background-color: rgb(31, 101, 148);
+				text-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px;
+				padding: 3px 0;
+				margin-left: 0;
+				margin-top: 3px;
+				margin-bottom: 0;
+				letter-spacing:0.2em;
+				word-spacing:0.2em;
+				opacity:1.9;
+				box-shadow:  9px 9px 8px rgba(150, 20, 150, 1);
+                              		}
+
+			BODY
+			{
+				background-image:url(w1images/logo.jpg);
+				background-repeat:no-repeat;
+				background-position:top center;
+				background-size:250px 350px;
+				padding-top:10px;
+				background-color:azure;
+			}
+
+			.tabL
+			{
+				background-color:rgb(50,135,190);
+				color:white;
+				font-size:1.2em;
+				font-weight:bold;
+				text-align:left;
+				border-top-color:magenta;
+				border-top-width:10;
+				border-bottom-color:red;
+				border-bottom-width:10;
+				border-left-color:olive;
+				border-left-width:10;
+				border-right-color:yellow;
+				border-right-width:10;
+				
+			}
+			
+			
+			
+			.fc 
+			{   //for form-controls
+				//background-color:baby blue;
+				background-image:url(images/back.jpg);
+				font-size:15pt;
+				border:solid;
+ 				border-color:chocolate;
+				color:red;
+				text-align:left;
+				border-width:2pt;
+				border-radius:15px;
+				//text-transform:uppercase;
+				
+			}		
+	
+				

@@ -1,0 +1,119 @@
+<html>
+<head>
+
+	<!--<LINK REL='stylesheet' TYPE='text/css' HREF='extss.css'/>-->
+	
+	<SCRIPT src="datetimepicker_css.js"></SCRIPT>
+
+<script type="text/javascript">
+
+function validate()
+	{
+		if(document.form3.bookname.value == "")
+		{
+			alert(" Please provide book name");
+			document.form3.bookname.focus();
+			return false;
+		}
+		if(document.form3.bookcode.value== "")
+		{
+			alert("please provide book code");
+			document.form3.bookcode.focus();
+			return false;
+		}
+		if(document.form3.authorname.value=="")
+		{
+			alert("Please provide author name");
+			document.form3.authorname.focus();
+			return false;
+		}
+		if(document.form3.dateofarrival.value==" ")
+		{
+			alert("Please provide date of arrival");
+			document.form3.dateofarrival.focus();
+			return false;
+		}
+		if(document.form3.price.value == "")
+		{
+			alert(" Please provide Price of the book");
+			document.form3.price.focus();
+			return false;
+		}
+		if(document.form3.rackno.value== "")
+		{
+			alert("please provide the rack number");
+			document.form3.rackno.focus();
+			return false;
+		}
+		if(document.form3.no_books.value=="")
+		{
+			alert("Please provide No.of books ");
+			document.form3.no_books.focus();
+			return false;
+		}
+		if(document.form3.subcode.value=="")
+		{
+			alert("Please provide subject code");
+			document.form3.subcode.focus();
+			return false;
+		}
+}
+
+</script>
+
+</head>
+
+<body background="images/back.jpg">
+
+	<p align=right><a href="index.php" target ='_blank'><b>LOGOUT</b></a></p>
+	<h1 align=center><B> STOCK MAINTAINENCE </B></h1>
+	<form name="form3" action="addbookssuccess.php" method="POST" onsubmit="return(validate());">  
+		<br>
+	<TABLE  align="center" border=1  width="10%" height="50%" >
+	<TR>
+	  <TD> Book name: </TD>
+	  <TD> <INPUT TYPE="text" NAME="bookname" size=35 placeholder="Enter Book name"  /> </TD>
+	</TR>
+	<TR>
+	  <TD> Book code: </TD>
+	  <TD> <INPUT TYPE="text" NAME="bookcode" size=35 placeholder="Enter Book code"  /> </TD>
+	</TR>
+	<TR>
+	  <TD> Author name: </TD>
+	  <TD> <INPUT TYPE="text" NAME="authorname" size=35 placeholder="Enter Author name"  /> </TD>
+	</TR>
+	
+	<TR>
+	  <TD> Date of Arrival: </TD>
+	  <TD> <INPUT TYPE="date" NAME="dateofarrival" placeholder="Enter date of Arrival"   />  </TD>
+	</TR>
+	<TR>
+	  <TD> Price: </TD>
+	  <TD> <INPUT TYPE="text" NAME="price" placeholder="Enter Price" /> </TD>
+	</TR>
+	<TR> 
+	  <TD> RackNO: </TD>
+	  <TD> <INPUT TYPE="text" NAME="rackno" placeholder="Enter the rack NO."  /> </TD>
+	</TR>
+	<TR>
+	  <TD> No.ofBooks: </TD>
+	  <TD> <INPUT TYPE="text" NAME="no_books" placeholder="Enter no.of books"  /> </TD>
+	</TR>
+	<TR>
+	  <TD> Book Category: </TD>
+	  <TD> <INPUT TYPE="text" NAME="subcode" placeholder="Enter book category"   /> </TD>
+	</TR>
+	<TR>
+	  <TD></TD>
+	  <TD align=center> <INPUT TYPE="submit" value="ADD"   /> </TD>
+	</TR>
+	</TABLE>
+	</form>
+
+	<form name="form2" action="totalbooks.php" method="POST">
+	
+		<center><b> View Books :</b> <INPUT type="submit" value="VIEW" /> </center>
+	</form>
+
+</body>
+</html>

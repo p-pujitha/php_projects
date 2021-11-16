@@ -1,0 +1,81 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function validate()
+{
+	if(document.form4.id_name2.value=="")
+	{
+		alert("Please enter Id name");
+		document.form4.id_name2.focus();
+		return false;
+	}
+	if(document.form4.bookname2.value=="")
+	{
+		alert("Please enter book name");
+		document.form4.bookname2.focus();
+		return false;
+	}
+	if(document.form4.bookcode2.value=="")
+	{
+		alert("Please enter book code");
+		document.form4.bookcode2.focus();
+		return false;
+	}
+	if(document.form4.dateofissue2.value=="")
+	{
+		alert("Please enter the date of issue");
+		document.form4.dateofissue2.focus();
+		return false;
+	}
+	if(document.form4.dateofexpiry2.value=="")
+	{
+		alert("Please enter date of expiry");
+		document.form4.dateofexpiry2.focus();
+		return false;
+	}
+}
+
+</script>
+
+</head>
+<body background="images/back.jpg" >
+	
+	<p align=right><a href="index.php" target ='_blank'><b>LOGOUT</b></a></p>
+	<h1 align=center><B> ISSUE OF BOOKS </B></h1>
+	<form name="form4" action="lendingsuccess.php" method="POST" onsubmit="return(validate());"> 
+		<br>
+	<TABLE align="center" border=1 width="10%" height="25%" >
+	<TR>
+	  <TD> IdNo: </TD>
+	  <TD> <INPUT TYPE="text" NAME="id_name2" size=35 placeholder="Enter user Id no" /> </TD>
+	</TR>
+	<TR>
+	  <TD> Book Name: </TD>
+	  <TD> <INPUT TYPE="text" NAME="bookname2" size=35 placeholder="Enter book name" /> </TD>
+	</TR>
+	<TR>
+	  <TD> Book Code: </TD>
+	  <TD> <INPUT TYPE="text" NAME="bookcode2" size=35 placeholder="Enter book code" /> </TD>
+	</TR>
+	<TR>
+	  <TD> Date of Issue: </TD>
+	  <TD> <INPUT TYPE="date" NAME="dateofissue2" placeholder="Enter date of issue" />  </TD>
+	</TR>
+	<TR>
+	  <TD> Date of Expiry: </TD>
+	  <TD> <INPUT TYPE="date" NAME="dateofexpiry2" placeholder="Enter date of Expiry"/> </TD>
+	</TR>
+	<TR>
+	  <TD></TD>
+	  <TD align=center> <INPUT TYPE="submit" value="ADD" /> </TD>
+	</TR>
+	</TABLE>
+	</form>
+
+	<form name="form2" action="issuebooks.php" method="POST">
+	
+		<center><b> Issue Books :</b> <INPUT type="submit" value="VIEW" /> </center>
+	</form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+ 	<!--<script type='javascript' src="ADDMEM.js">
+	</script>-->
+	
+	<script type="text/javascript"> 
+	function validate()
+	{
+		if(document.form1.id_name.value == "")
+		{
+			alert(" Please provide id name");
+			document.form1.id_name.focus();
+			return false;
+		}
+		if(document.form1.name.value== "")
+		{
+			alert("please provide Your name");
+			document.form1.name.focus();
+			return false;
+		}
+		if(document.form1.mailid.value=="")
+		{
+			alert("Please provide your mailid");
+			document.form1.mailid.focus();
+			return false;
+		}
+		if(document.form1.addr.value==" ")
+		{
+			alert("Please provide your address");
+			document.form1.addr.focus();
+			return false;
+		}
+		if (( form1.gender[0].checked == false ) && ( form1.gender[1].checked == false ) )
+		{
+			alert("Please choose gender");
+			return false;
+		}
+}
+</script>
+	
+
+<script src="datetimepicker_css.js"></script>
+</head>
+
+<body background="images/back.jpg">
+	<p align=right><a href="index.php" target ='_blank'><b>LOGOUT</b></a></p>
+
+	<h1 align=center><B> MEMBERSHIP </B></h1>
+
+	<form name="form1" action="addmemberssuccess.php" method="POST" onsubmit="return(validate());"> 
+		<br>
+	<TABLE align="center" border=1 width="5%" height="10%" >
+
+	<TR>
+	  <TD> IdNo: </TD>
+	  <TD> <INPUT TYPE="text" NAME="id_name" ID="id_name" size=35 placeholder="Enter user Id no" /> </TD>
+	</TR>
+	
+	<TR>
+	  <TD> Name: </TD>
+	  <TD> <INPUT TYPE="text" NAME="name" ID="name" size=35 placeholder="Enter user name" /> </TD>
+	</TR>
+	<TR>
+	  <TD> EmailId: </TD>
+	  <TD> <INPUT TYPE="text" NAME="mailid"  ID="mailid" size=35 placeholder="Enter mail Id" /> </TD>
+	</TR>
+	<TR>
+	  <TD> Address: </TD>
+	  <TD> <TEXTAREA ROWS="4" NAME="addr" ID="addr" COLS="27" placeholder="Enter address" > </TEXTAREA> </TD>
+	</TR>
+	<TR>
+	  <TD> Gender: </TD>
+	  
+	  <TD> <select name="gender" > <option value="Male">male</option>
+			<option value="Female" >Female</option>
+		 </select> </TD>
+	</TR>
+	<TR>
+	  <TD></TD>
+	  <TD align=center> <INPUT TYPE="submit" value="ADD"  /> </TD>
+	</TR>
+	<!--<TR>
+	  <TD></TD>
+	   <TD align=center> <button>ADD</button></TD>
+	</TR>-->
+	</TABLE>
+	</form>
+
+	<form name="form2" action="totalmembers.php" method="POST">
+	
+		<center><b> View Registered Members :</b> <INPUT type="submit" value="VIEW" /> </center>
+	</form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function validate()
+{
+	if(document.form5.id_name3.value=="")
+	{
+		alert("Please enter Id name");
+		document.form5.id_name3.focus();
+		return false;
+	}
+	if(document.form5.bookname3.value=="")
+	{
+		alert("Please enter book name");
+		document.form5.bookname3.focus();
+		return false;
+	}
+	
+	if(document.form5.dateofissue3.value=="")
+	{
+		alert("Please enter the date of issue");
+		document.form5.dateofissue3.focus();
+		return false;
+	}
+	if(document.form5.dateofexpiry3.value=="")
+	{
+		alert("Please enter date of expiry");
+		document.form5.dateofexpiry3.focus();
+		return false;
+	}
+}
+
+</script>
+
+</head>
+<body background="images/back.jpg">
+
+	<p align=right><a href="index.php" target ='_blank'><b>LOGOUT</b></a></p>
+	<h1 align=center><B> RETURN OF BOOKS  </B></h1>
+	<form name="form5" action="returningsuccess.php" method="POST" onsubmit="return(validate());"> 
+		<br>
+	<TABLE align="center" border=1 width="10%" height="25%" >
+	<TR>
+	  <TD> IdNo: </TD>
+	  <TD> <INPUT TYPE="text" NAME="id_name3" size=35 placeholder="Enter user Id no" /> </TD>
+	</TR>
+	<TR>
+	  <TD> Book Name: </TD>
+	  <TD> <INPUT TYPE="text" NAME="bookname3" size=35 placeholder="Enter user name" /> </TD>
+	</TR>
+	<TR>
+	  <TD> Date of Issue: </TD>
+	  <TD> <INPUT TYPE="date" NAME="dateofissue3" placeholder="Enter date of issue" />  </TD>
+	</TR>
+	<TR>
+	  <TD> Date of Expiry: </TD>
+	  <TD> <INPUT TYPE="date" NAME="dateofexpiry3" placeholder="Enter date of Expiry"/> </TD>
+	</TR>
+	<TR>
+	  <TD></TD>
+	  <TD align=center> <INPUT TYPE="submit" value="ADD" /> </TD>
+	</TR>
+	</TABLE>
+	</form>
+	
+	<form name="form2" action="returningbooks.php" method="POST">
+	
+		<center><b> Return books :</b> <INPUT type="submit" value="VIEW" /> </center>
+	</form>
+
+
+</body>
+</html>
