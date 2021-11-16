@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+
+ <link rel="stylesheet" href="boostrapcss/bootstrap.min.css">
+ <!-- <script src="boostrapcss/jquery.min.js"></script>-->
+  <script src="boostrapcss/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="boostrapcss/main.css" >
+  <script src="boostrapcss/main.js"></script>   
+  <script type="text/javascript" src="login.js" > </script>
+
+  <!--testing -->
+   
+
+  
+</head>
+<body>
+
+<div class="navbar-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">WELCOME TO </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="intro.html" class="">STUDENT - FACULTY INTERACTION...!!</a></li>
+                 
+                        <li><a href="intro.html" class="smoothScroll">Introduction </a></li>
+                      
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Login/Register <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="login.html" class="smoothScroll">Login</a></li>
+                                <li><a href="registration.html">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    
+<div class="row" style="margin-top:60px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form  id="form1" method="POST" action="login.php">
+      <fieldset>
+        <h2>Please Sign In</h2>
+        <hr class="colorgraph">
+        <div class="form-group">
+                    <input type="text" name="nameid"  id="nameid" class="form-control input-lg" placeholder="Enter your ID ">
+        </div>
+        <div class="form-group">
+                    <input type="password" name="password"  id="password" class="form-control input-lg" placeholder="Password">
+        </div>
+        <div class="radio">
+                  <label><input type="radio" name="loginmember" value="student">Student</label>
+                  <label><input type="radio" name="loginmember"  value="faculty">Faculty</label>
+                  <!--<label><input type="radio" name="loginmember"  value="admin">Admin</label>-->
+        </div>
+        
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+                        <!--<input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">-->
+                        <button type="submit" id="btn" class="btn btn-lg btn-success btn-block">Login</button>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <a href="registration.html" class="btn btn-lg btn-primary btn-block">Register</a>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+</div>  
+
+<script type = 'text/javascript'>
+    $(document).ready(function(){
+
+        $("#form1").validate({
+           rules: {
+             nameid: "required",
+             password: "required"
+           },
+           messages: {
+             nameid: "Please specify your name",
+             password :"please enter password"
+
+           }
+        })
+
+        $('#btn').click(function() {
+           $("#form1").validate();  // This is not working and is not validating the form
+          });
+
+
+        });
+
+  </script>
+
+
+
+
+</body>
+</html>
