@@ -1,0 +1,50 @@
+<html>
+<head>
+ 	<script type='javascript' src="ADDMEM.js">
+	</script>
+	<script src="datetimepicker_css.js"></script>
+</head>
+
+<body background="backgroundimage.jpg">
+
+	<h1 align=center><B> MEMBERSHIP </B></h1>
+
+	<form name="form1" action="addmemberssuccess.php" method="POST" onsubmit="return validateForm()"> 
+		<br>
+	<TABLE align="center" border=1 width="5%" height="10%" >
+
+	<TR>
+	  <TD> IdNo: </TD>
+	  <TD> <INPUT TYPE="text" NAME="id_name" ID="id_name" size=35 placeholder="Enter user Id no" /> </TD>
+	</TR>
+	
+	<TR>
+	  <TD> Name: </TD>
+	  <TD> <INPUT TYPE="text" NAME="name" ID="name" size=35 placeholder="Enter user name" /> </TD>
+	</TR>
+	<TR>
+	  <TD> EmailId: </TD>
+	  <TD> <INPUT TYPE="text" NAME="mailid"  ID="mailid" size=35 placeholder="Enter mail Id" /> </TD>
+	</TR>
+	<TR>
+	  <TD> Address: </TD>
+	  <TD> <TEXTAREA ROWS="4" NAME="addr" ID="addr" COLS="27" placeholder="Enter address" > </TEXTAREA> </TD>
+	</TR>
+	<TR>
+	  <TD> Gender: </TD>
+	  <TD> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<INPUT TYPE="radio" NAME="gender">Male
+		<INPUT TYPE="radio" NAME="gender">Female </TD>
+	</TR>
+	<TR>
+	  <TD></TD>
+	  <TD align=center> <INPUT TYPE="submit" value="ADD" /> </TD>
+	</TR>
+	<!--<TR>
+	  <TD></TD>
+	   <TD align=center> <button>ADD</button></TD>
+	</TR>-->
+	</TABLE>
+	</form>
+</body>
+</html>
